@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Venkat's Blog</title>
+  <title>{{ blog.title}}</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Bootstrap core CSS -->
@@ -38,19 +38,12 @@
   <main role="main">
     <div class="container">
 
-  <h1 class="text-center pt-3">Welcome to Venkat's Blog</h1>
+ <h1 class="text-center pt-3">{{ blog.title }}</h1>
+<p class="text-center">  {{ blog.pub_date_pretty }}</p>
   <br/>
-  <br/>
-  <br/>
-  <h2>Latest Posts</h2>
-  <hr/>
-  {% for blog in blogs.all %}
-  <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
-  {{ blogs.pub_date_pretty}}
-  <br/>
-  <img src="{{ blog.image.url }}" class="img-fluid" width="200px" height="200px"><br/>
-  <p>{{ blog.summary }}
-  {% endfor%}
+  <img src="{{ blog.image.url }}" class="img-fluid" width="500" ><br/>
+  <p>{{ blog.body }}</p>
+
   </div>
 
   </main>

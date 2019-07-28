@@ -3,13 +3,13 @@
 <!doctype html>
 <html lang="en">
 <head>
+  {% load staticfiles %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-  <title>Album example for Bootstrap</title>
+  <title>SHIVA@VENKAT</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Bootstrap core CSS -->
@@ -20,15 +20,15 @@
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">SHIVA@VENKAT</a>
+      <a class="navbar-brand" href="{% url 'home' %}">SHIVA@VENKAT</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link " href="#">Facebook</a>
-          <a class="nav-item nav-link" href="#">Resume</a>
-          <a class="nav-item nav-link" href="#">Blog</a>
+          <a class="nav-item nav-link " href="http://www.facebook.com/shiva.venkat.16">Facebook</a>
+          <a class="nav-item nav-link" href="{% static 'venkat_resume.pdf' %}">Resume</a>
+          <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
           <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
         </div>
       </div>
@@ -44,6 +44,7 @@
         <p>
           <a href="mailto:shivavenkat69@gmail.com" class="btn btn-primary my-2">Email Me</a>
         </p>
+        <img src="{% static '20180812_180448.jpg' %}" class="bd-placeholder-img rounded-circle" width=250 height=250 />
       </div>
     </section>
 
